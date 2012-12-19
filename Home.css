@@ -1,0 +1,229 @@
+.Home{
+z-index: 1;
+    background: #135837; /* for non-css3 browsers */
+    background: radial-gradient(right top, #135837,#d05113); /* W3C */
+    background: -moz-radial-gradient(right top, #135837,  #d05113); /* for firefox 3.6+ */
+    background: -webkit-gradient(radial, right top, from(#135837), to(#d05113)); /* Safari 4+, Chrome */
+    background: -webkit-radial-gradient(right top, #135837, #d05113); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background: -o-radial-gradient(right top, #135837,#d05113); /* Opera 11.10+ */
+text-align: center;
+
+
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+
+}
+.Settings{
+
+z-index: 3;
+opacity: 0.4;
+}
+.SettingButton1{
+    width: 30%;
+    height: 10%;
+z-index: 4;
+    border-radius: 25%;
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    background: #222222; /* for non-css3 browsers */
+    background: linear-gradient(top, #222222,#c8c8c8); /* W3C */
+    background: -moz-linear-gradient(top, #222222,  #c8c8c8); /* for firefox 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(#222222), to(#c8c8c8)); /* Safari 4+, Chrome */
+    background: -webkit-linear-gradient(left top, left bottom, #222222, #c8c8c8); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background: -o-linear-gradient(top, #222222,#c8c8c8); /* Opera 11.10+ */
+    background:-ms-filter:"progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#222222, EndColorStr=#c8c8c8, GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222222', endColorstr='#c8c8c8', GradientType='0'); /* for IE */
+    border: 14px outset #bfbfbf;
+text-align: center;
+    position: fixed;
+    left: 35%;
+    font-family: cursive;
+    font-size: 200%;
+top: 65%;
+    vertical-align: middle;
+}
+.NotificationHeader{
+    width: 30%;
+    height: 15%;
+    background: #ffffff; /* for non-css3 browsers */
+    background: linear-gradient(top, #ffffff,#676a67); /* W3C */
+    background: -moz-linear-gradient(top, #ffffff,  #676a67); /* for firefox 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#676a67)); /* Safari 4+, Chrome */
+    background: -webkit-linear-gradient(left top, left bottom, #ffffff, #676a67); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background: -o-linear-gradient(top, #ffffff,#676a67); /* Opera 11.10+ */
+    background:-ms-filter:"progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#ffffff, EndColorStr=#676a67, GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#676a67', GradientType='0'); /* for IE */
+z-index: 8;
+    /*Firefox*/
+    -moz-border-top-left-radius: 0px;
+    -moz-border-top-right-radius: 0px;
+    -moz-border-bottom-left-radius: 50pt;
+    -moz-border-bottom-right-radius: 50pt;
+    /*Safari, Chrome*/
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 50pt;
+    -webkit-border-bottom-right-radius: 50pt;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 50pt;
+    border-bottom-right-radius: 50pt;
+    color: orange;
+    font-size: 230%;
+    font: bold;
+    position: fixed;
+    top: 0px;
+    left: 35%;
+    font-family:Courier New;
+    text-align: center;
+}
+.HomeFont{
+    font-size: 500%;
+font-family: Narkisim;
+
+ color: #a52a2a;
+
+}
+.Button3{
+    background-color: orange;
+    z-index: 2;
+
+
+
+    border-radius: 25%;
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    border: 20px double #50bdb4;
+    text-align: center;
+    text-decoration: none;
+position: fixed;
+    left: 43%;
+    top: 50%;
+    height: 5%;
+    width: 14%;
+
+
+
+
+    color: #f4a460;
+    font-size: 200%;
+    font-family: fantasy;
+
+
+}
+.Button2{
+    background-color: #c71585;
+    z-index: 2;
+
+
+
+    border-radius: 25%;
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    border: 20px double #50bdb4;
+    text-align: center;
+position: fixed;
+    left: 44%;
+    top: 35%;
+    height: 5%;
+    width: 12%;
+
+
+
+
+    color: #4169e1;
+    font-size: 200%;
+    font-family: fantasy;
+
+}
+
+a{
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+    color: blue;}
+a:visited{
+    text-decoration: none;
+  color: blue;
+}
+
+.button1{
+    z-index: 2;
+    border-radius: 25%;
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    border: 20px double #50bdb4;
+    text-align: center;
+    text-decoration: none;
+position: fixed;
+    left: 43%;
+    top: 20%;
+
+
+    color: #4169e1;
+    font-size: 200%;
+    font-family: fantasy;
+    height: 5%;
+    width: 14%;
+    background: none;
+
+   background-color: red;
+
+
+
+}
+
+.About{
+padding: 5%;
+    width: 75%;
+    height: 65%;
+    background: #5181a2; /* for non-css3 browsers */
+    background: linear-gradient(top, #5181a2,#1c4486); /* W3C */
+    background: -moz-linear-gradient(top, #5181a2,  #1c4486); /* for firefox 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(#5181a2), to(#1c4486)); /* Safari 4+, Chrome */
+    background: -webkit-linear-gradient(left top, left bottom, #5181a2, #1c4486); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background: -o-linear-gradient(top, #5181a2,#1c4486); /* Opera 11.10+ */
+    background:-ms-filter:"progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#5181a2, EndColorStr=#1c4486, GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5181a2', endColorstr='#1c4486', GradientType='0'); /* for IE */
+
+    border: 10pt dashed #000000;
+    border-radius: 60pt;
+    -webkit-border-radius: 60pt;
+    color: #bc8f8f;
+font-size: 240%;
+
+    vertical-align: middle;
+    position: fixed;
+    top: 10%;
+    left: 8%;
+    opacity: 0.9;
+
+}
+.ExitAbout{
+    position: fixed;
+    width: 5%;
+    top: 5%;
+    left: 5%;
+}
+.AlertBox{
+    padding: 1%;
+    width: 36%;
+    height: 20%;
+    position: fixed;
+    background-color: #ff4500;
+    border-radius: 50pt;
+    -webkit-border-radius: 50pt;
+    font-size: 130%;
+    bottom: 2%;
+    left: 32%;
+    vertical-align: middle;
+    border: 14pt outset #ff0000;
+    font-family: narkisim;
+    vertical-align: middle;
+}
+.Big{
+    font-size: 200%;
+    color: red;
+    font: bold;
+}

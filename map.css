@@ -1,0 +1,370 @@
+.headermin{
+
+    height:7%;
+    z-index:400;
+    position:fixed;
+    top: 0%;
+    left:0%;
+    width: 100%;
+    background-color: #2a2a2a;
+
+
+}
+.CountDown
+{
+    position:fixed;
+    top:2%;
+    left:1.5%;
+}
+.headermax{
+    position:fixed;
+    top: 6%;
+    left:0%;
+    width: 100%;
+    height: 40%;
+    background-color: #2a2a2a;
+
+
+    z-index: 1;
+}
+.EasyImg{
+    position: fixed;
+    bottom:0%;
+    vertical-align: middle;
+    left: 0%;
+    -webkit-box-shadow: 0px 0px 10px 0px #ffffff; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    box-shadow: 0px 0px 10px 0px #ffffff; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+
+
+    z-index: 300;
+}
+.PerfImg{
+    position:fixed;
+    left:4%;
+    top:4%;
+    z-index: 4;
+
+}
+.FontBox{
+width: 100%;
+    height: 20%;
+    z-index: 900;
+    background-color: #ffffff;
+    opacity: 1;
+    border-radius: 25pt;
+    -webkit-border-radius: 25pt;
+}
+.HeaderFontShadow{
+    color: white;
+
+    text-align: center;
+
+    font-size:200%;
+    margin-left: 16%;
+    margin-right: 18%;
+
+    text-shadow: 0px 0px 50px #ffffff;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#ffffff)";/*IE 8*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#ffffff); /*IE 5.5-7*/
+
+}
+.HeaderFont{
+    color: #920c0c;
+    text-align: center;
+    margin-left: 16%;
+    margin-right: 18%;
+    font-size:200%;
+    text-shadow: 0px 0px 50px #66ff00;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00)";/*IE 8*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00); /*IE 5.5-7*/
+}
+.Score,.CountDown
+{
+    text-shadow: 0px 0px 25px #067800;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=90, Color=#225c15)";/*IE 8*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=90, Color=#225c15); /*IE 5.5-7*/
+    font-family: Arial;
+    z-index: 10;
+    color: #225c15;
+    text-align: center;
+    width: 13%;
+    height: 6%;
+    background-color: #b22222;
+    -webkit-border-radius: 100%; /* Safari 3-4, iOS 1-3.2, Android ?1.6 */
+    border-radius: 100%; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+    border:  5px #ffffff;
+    position: fixed;
+    top: 4%;
+    right: 1.5%;
+    font:narrower;
+    font-size: 80%;
+    vertical-align: top;
+
+}
+.Score{
+    width: 17%;
+}
+.FinishGame,.FinishGameOK,.FinishGameEXL, .FinishGameNoClick, .FinishGameBad, .FinishGameGood{
+    width: 100%;
+    height: 110%;
+    z-index: 1001;
+
+    position: fixed;
+
+    left: 0%;
+    -moz-animation-duration:2s;
+
+}
+.FinishGame{
+    top:-100%;
+    -moz-animation-name: finish;
+    background-color: green;
+
+}
+.FinishGameGood{
+    top: -10%;
+    background-color: #006400;
+    -moz-animation-name : finishgood;
+
+}
+.FinishGameOK{
+    top: -10%;
+    background-color: #bc8f8f;
+    -moz-animation-name : finishok;
+
+}
+.FinishGameEXL{
+    top: -10%;
+
+    background-color:#7cfc00;
+    -moz-animation-name : finishexl;
+
+
+}
+.FinishGameBad{
+    top: -10%;
+    background-color: #f60000;
+    -moz-animation-name : finishbad;
+}
+.FinishGameNoClick{
+    top: -10%;
+    background-color: #dcdcdc;
+    -moz-animation-name: finishnoclick;
+
+}
+@-moz-keyframes finish{
+    from{
+        top:-100%;
+        background-color :  black;
+    }
+    to{
+        top: 0%;
+        background-color: green;
+
+    }
+
+}
+@-moz-keyframes finishexl{
+    from{
+
+        background-color :  green;
+    }
+    to{
+
+        background-color: #7cfc00;
+
+    }
+}
+@-moz-keyframes finishgood{
+    from{
+
+        background-color :  green;
+    }
+    to{
+
+        background-color: #006400;
+
+    }
+}
+@-moz-keyframes finishok{
+    from{
+
+        background-color :  green;
+    }
+    to{
+
+        background-color: #bc8f8f;
+
+    }
+
+}
+@-moz-keyframes finishnoclick{
+    from{
+
+        background-color :  green;
+    }
+    to{
+
+        background-color: #dcdcdc;
+
+    }
+
+}
+@-moz-keyframes finishbad{
+    from{
+
+        background-color :  green;
+    }
+    to{
+
+        background-color: #f60000;
+
+    }
+
+}
+.Box{
+    position: fixed;
+    top: 60%;
+    left: 15%;
+    width: 70%;
+    height: 20%;
+    border: 50px #f5f5f5;
+    border-radius: 50pt;
+    -webkit-border-radius: 50pt;
+    background-color: #ff4500;
+    z-index: 1001;
+}
+
+.Star1,.Star2,.Star3{
+    z-index: 1008;
+    position: fixed;
+    top: 62.5%;
+    -moz-animation-duration: 2s;
+    -moz-animation-name: StarFall;
+}
+.StarPlace1,.StarPlace2,.StarPlace3{
+    z-index: 1003;
+    position: fixed;
+    top: 62.5%;
+}
+.StarPlace1,.Star1{
+
+
+    left: 25%;
+
+}
+.StarPlace2,.Star2{
+
+    left: 45%;
+
+}
+.StarPlace3,.Star3{
+
+    left: 65%;
+}
+
+
+@-moz-keyframes StarFall{
+    from{
+        top: -10%;
+
+    }
+    to{
+        top: 62.5%;
+    }
+}
+
+
+.ChangeOp{
+
+    opacity: 1;
+    -moz-animation-duration:2s;
+    -moz-animation-name:opacity;
+}
+
+@-moz-keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+header.Finish{
+    position: relative;
+    margin-top: 10%;
+    height: 15%;
+    border-bottom-color: black;
+    border-bottom-width: 5px;
+    color: #9400d3;
+    text-align: center;
+    z-index: 1002;
+    font-family: narkisim;
+    font: bold;
+}
+
+header.Sub{
+    margin: 5%;
+    font-size: 110%;
+    color: #8b0000;
+    text-shadow: 0px 0px 15px white ;
+    text-align: center;
+    z-index: 1002;
+}
+
+footer.Info{
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 120%;
+    font-family: cursive;
+}
+footer{
+    z-index: 1002;
+}
+.BackToGame{
+    background: #7357ff; /* for non-css3 browsers */
+    background: radial-gradient(center, #7357ff,#f60c33); /* W3C */
+    background: -moz-radial-gradient(center, #7357ff,  #f60c33); /* for firefox 3.6+ */
+    background: -webkit-gradient(radial, center center, from(#7357ff), to(#f60c33)); /* Safari 4+, Chrome */
+    background: -webkit-radial-gradient(center center, #7357ff, #f60c33); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background: -o-radial-gradient(center, #7357ff,#f60c33); /* Opera 11.10+ */
+-moz-animation-duration:5s;
+    -moz-animation-name: opacity;
+    height: 8%;
+    width: 18%;
+    border-top-right-radius: 25pt;
+    border-bottom-right-radius: 25pt;
+    -webkit-border-bottom-right-radius: 25pt;
+    -webkit-border-top-right-radius: 25pt;
+    color: #f5deb3;
+    vertical-align: middle;
+    position: fixed;
+    top: 4%;
+    right: 5%;
+    padding-top: 1%;
+    border: 11pt dotted #ffffff;
+    font-size: 180%;
+    text-align: center;
+    font-family:Narkisim;
+    z-index: 1006;
+    text-decoration: underline;
+}
+.Pause{
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0%;
+    left: 0%;
+}
+.Resume{
+    position: fixed;
+    height: 15%;
+width: 20%;
+    left: 40%;
+    top: 30%;
+    border: 12px outset #42058d;
+    background-color: #696969;
+    z-index: 1000;
+}
