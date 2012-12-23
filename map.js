@@ -1,11 +1,14 @@
-
-
+var AlertTime = new Boolean();
+var ibitween;
+var ContinueGameNow = new Boolean(true);
+var ContinueReplaying = new Boolean(true);
 var NowPlay = new Boolean(true);
         var ImageClicked = new Boolean();
-var TotalClicked;
+var CDown = new Boolean(true);
+var AddedScoreFirstTime = new Boolean();
 var WaitTime = 0;
         var Score= 0;
-var TotalTimesClicked;
+var TotalTimesClicked = 8;
         var WinWidth = screen.width;
         var WinHeight = screen.height;
         var ImgHeight=WinWidth/2 ;
@@ -27,6 +30,7 @@ var Count = 0;
         var PreferedImgHeight = WinHeight - MinHeader;
         var elPos = {};
 var TotalDistanceX=0, TotalDistanceY=0;
+var i;
 
 /*if  (AppHeight > WinHeight)
      {
@@ -39,6 +43,7 @@ else{
 jQuery(document).ready(function(){
 
 City();
+    Count++;
   var GameInterval =  window.setInterval(function(){
 
        if(Count ==7)
@@ -59,7 +64,7 @@ NowPlay=false;
 
 
 function FinishedGame(){
-
+CDown = false;
 Score=elPos.a;
 
     $(".FinishedGame").html("<span  class='FinishGame' ></span>");
@@ -115,7 +120,7 @@ else if (Score>390){
     },2000);
 
 }
-else if(TotalClicked<5 && Score<350)
+else if(TotalTimesClicked<5 && Score<350)
 {
 
     setTimeout(function(){
@@ -152,12 +157,17 @@ setTimeout(function(){
 }
 
 function City() {
+    AlertTime = false;
+NowPlay = true
 elPos.x = 0;
+    CDown = true;
     elPos.y=0;
+$("#WantedPlace").html("");
     CountDown();
     var Random1 = Math.floor((Math.random() * 3) + 1);
     var Random2 = Math.floor((Math.random() *7) +1);
     var RandomPlace = Random1+Random2;
+elPos.r = RandomPlace;
 if(Recovered[RandomPlace]||!Places[RandomPlace]){
     var XYScore = 0;
     SwitchPlace(RandomPlace);
@@ -167,60 +177,79 @@ if(Recovered[RandomPlace]||!Places[RandomPlace]){
         else
                $('#Place').html("The aliens are attacking " + Place);
     Places[RandomPlace] = true;
+
  setTimeout(function () {
-        $('#Place').html(Place);
-         GetClicked();
-         XYScore = ScoreMulti();
-$("#HeaderFont").removeClass("HeaderFontShadow").addClass("HeaderFont");
-
-         if (!ImageClicked) {
-
-              $('#HeaderAfterWrite').html(", all the people were killed");
-              $('#HeaderWrite').html("No one helped ");
-                            }
-         else if (XYScore > 69)
-                {$('#HeaderWrite').html("Youv'e succesfuly recover the city ");
-                 Recovered[RandomPlace] = true;
-                TotalClicked++;}
-
-         else if (XYScore > 39){
-                $('#HeaderWrite').html("half of the city ");
-             $('#HeaderAfterWrite').html(" was recovered");
-                Recovered[RandomPlace] = true;
-                             TotalClicked++ }
-
-          else {
-                $('#HeaderAfterWrite').html("is fully destroyed now!");
-
-                $('#HeaderWrite').html(" ");
-             TotalClicked++;
-               }
-
-     elPos.z = false;
+     if(ContinueGameNow){
+         AddedScoreFirstTime = false;
+AlertScores(RandomPlace);
+         AlertTime = true;
+     }
 },7500);
+
+
   setTimeout(function () {
+      if (ContinueReplaying){
        $("#HeaderAfterWrite,#HeaderWrite").html("");
 
 $("#HeaderFont").removeClass("HeaderFont").addClass("HeaderFontShadow");
+      CDown = true;
+          elPos.z = false;}
     }, 10499);
 }
 else City();
 }
 
+function AlertScores(RandomPlace) {
+        CDown = false;
+        $('#Place').html(Place);
+        GetClicked();
+    if(!AddedScoreFirstTime)
+        XYScore = ScoreMulti();
+        $("#HeaderFont").removeClass("HeaderFontShadow").addClass("HeaderFont");
 
-function CountDown(){
-    var i =75;
-    window.setInterval(function () {
+        if (!ImageClicked) {
 
-    if (i >= 0) {
-        if (i % 10 == 0)
-        $(".CountDown").html(i/10+".0");
-        else
-    $(".CountDown").html(i/10);
-    i --;
-    }
-}, 99);
+            $('#HeaderAfterWrite').html(", all the people were killed");
+            $('#HeaderWrite').html("No one helped ");
+            TotalTimesClicked--;
+        }
+        else if (XYScore > 69)
+        {$('#HeaderWrite').html("Youv'e succesfuly recover the city ");
+            Recovered[RandomPlace] = true;
+        }
+
+        else if (XYScore > 39){
+            $('#HeaderWrite').html("half of the city ");
+            $('#HeaderAfterWrite').html(" was recovered");
+            Recovered[RandomPlace] = true;
+        }
+
+        else {
+            $('#HeaderAfterWrite').html("is fully destroyed now!");
+
+            $('#HeaderWrite').html(" ");
+
+        }
+AddedScoreFirstTime = true;
+
 }
+ function CountDown(){
+
+   var i = 74;
+     $(".CountDown").html(7.5);
+var CountInt = setInterval(function(){
+    if (i  >= 0  && CDown){
+    ibitween = i/10;
+        if(Math.floor(ibitween)==ibitween)
+        ibitween = ibitween+".0";
+        $(".CountDown").html(ibitween);
+    i--}
+    else
+    clearInterval(CountInt);
+},99);
+
+
+ }
 
 
 function SwitchPlace(RandomPlace) {
@@ -294,42 +323,44 @@ return (WantedXPr*1000)+WantedYPr;
 }
 
 
-var Wanted= SwitchPlace();
-WantedYPr = Wanted % 1000;
-WantedXPr = Wanted - WantedYPr;
-
-elPos.z = false;
-
-        $("#body").click(function(Event){
 
 
-            if(Event.pageY <= HeaderHeight && NowPlay)
+
+        $("body").click(function(Event){
+
+if(NowPlay){
+            if(Event.pageY <= HeaderHeight)
                 Pause();
-            else{
+            else if (!AlertTime){
              TouchedX = Event.pageX;
             TouchedY = Event.pageY;
-            $("#WantedPlace").html("<img src='Target.png' style=' width: 20px; height: 20px; font-size: 150%;-webkit-transform:rotate(270deg);z-index: 1000; position: fixed; left:"+(TouchedX-10)+"px; top: "+(TouchedY-10)+"px;' >");
-TotalTimesClicked++;
-            TouchedX = Event.pageX;
-            TouchedY = Event.pageY;
+                if(WinHeight> 1000 && WinWidth > 1200)
+            $("#WantedPlace").html("<img src='Target.png' style=' width: 30px; height: 30px; font-size: 150%;z-index: 1000; position: fixed; left:"+(TouchedX-15)+"px; top: "+(TouchedY-15)+"px;' >");
+            else
+                $("#WantedPlace").html("<img src='Target.png' style=' width: 16px; height: 16px; font-size: 150%;z-index: 1000; position: fixed; left:"+(TouchedX-8)+"px; top: "+(TouchedY-8)+"px;' >");
+
+
+
+
             elPos.x = TouchedX;
             elPos.y = TouchedY;
 elPos.z = true;
             }
-
+}
         });
 function GetClicked()
     {
         ImageClicked = elPos.z;
         }
 function ScoreMulti(){
-    GetClicked();
+
+
 
     TouchedX = elPos.x;
     TouchedY = elPos.y;
     var RealWantedX = Scale * WantedXPr;
     var RealWantedY = HeaderHeight + (Scale * WantedYPr);
-   // $("#WantedPlace").html("<span style='width:50px; height: 50px; background-color: red; z-index: 500; position: fixed; left:"+RealWantedX+"px; top: "+RealWantedY+"px;' >hallo</span>");
+
     XDistance =RealWantedX-TouchedX;
     YDistance =RealWantedY-TouchedY;
     TotalDistanceX +=XDistance;
@@ -338,8 +369,8 @@ function ScoreMulti(){
     YDistance =  Math.abs(YDistance);
 
 
-    XDistance = XDistance * 0.8;
-    YDistance = YDistance * 0.8;
+    XDistance = XDistance * 0.7;
+    YDistance = YDistance * 0.7;
 
     XDistance = 50 - XDistance;
     YDistance = 50 - YDistance;
@@ -355,13 +386,73 @@ elPos.a=Score;
     return XYScore;
 }
 
-/*Ø Distance Y: "+TotalDistanceY/7+" px | Ø Distance X: "+TotalDistanceY/7+" px | Total Distance of Y: "+TotalDistanceY+" px | Total Distance of X: "+TotalDistanceX+" px" + "<br> Ø Score: "+Score/7*/
 
 function Pause(){
     clearInterval(GameInterval);
- 
-    $('#HeaderWrite, #HeaderAfterWrite, .Score, #x2, #Place, .CountDown').html("");
-    $('#Pause').html("<img src='Black.png' class='Pause'><div class='Resume'></div>")
-}
+ContinueGameNow = false;
+    ContinueReplaying = false;
+CDown = false;
+    $('#HeaderWrite, #HeaderAfterWrite, #x2, #Place, .CountDown, #WantedPlace').html("");
+    $('#Pause').html("<section class='Pause'></section><h1 id='Resume'><div class='Resume' id ='ResumeButton'>Resume</div></h1>");
+    NowPlay=false;
 
-});
+    $("#ResumeButton").click(function(){
+
+       Resume();
+    });
+}
+function Resume(){
+
+    $('#Resume').html("<div class='ResumeCountDown'>3</div>");
+    setTimeout(function(){
+        $('#Resume').html("<div class='ResumeCountDown'>2</div>");
+    document.getElementsByClassName("Pause").style.opacity=0.6;
+    },1000)
+    setTimeout(function(){$('#Resume').html("<div class='ResumeCountDown'>1</div>");
+        document.getElementsByClassName("Pause").style.opacity=0.4;
+   },2000)
+    setTimeout(function(){
+    $("#x2").html(Score);
+$("#Pause").html("");
+    if(AlertTime)
+    {
+        $(".CountDown").html("0.0");
+        var RandomPlace = elPos.r;
+        AlertScores(RandomPlace);
+setTimeout(function(){
+    ResumeCity();
+    $("#HeaderFont").removeClass("HeaderFont").addClass("HeaderFontShadow");
+    $("#HeaderAfterWrite,#HeaderWrite").html("");
+},3000);
+    }
+   else
+    ResumeCity();
+    },3000);
+}
+    function ResumeCity(){
+        CDown = true;
+
+        setTimeout(function(){ContinueGameNow = true;},7498);
+        setTimeout(function(){ContinueReplaying = true;},10496);
+        City();
+
+        GameInterval= window.setInterval(function(){
+
+            if(Count ==7)
+            {
+
+                FinishedGame();
+                NowPlay=false;
+                clearInterval(GameInterval);
+            }
+            else
+            {  $("#x2").html(Score);
+                City();
+                Count++;}
+
+        }, 10500);
+    }
+    });
+
+
+/*Ø Distance Y: "+TotalDistanceY/7+" px | Ø Distance X: "+TotalDistanceY/7+" px | Total Distance of Y: "+TotalDistanceY+" px | Total Distance of X: "+TotalDistanceX+" px" + "<br> Ø Score: "+Score/7*/

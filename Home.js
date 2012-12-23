@@ -47,12 +47,15 @@ function Sound(){
         $("#Notification").removeClass("NotificationHeader");},3000)
 
 }*/
+
+
+
 function About(){
-    $("nav").html("<p><h4>This App is developed by Boaz katzir and with help of Yuval Fatal, Roni Ben Dov and Roei Bason</h5> </p>" +
+    $("nav").html("<section style='font-size: 1.3em;'><h4>This App is developed by Boaz katzir and with help of Yuval Fatal, Roni Ben Dov and Roei Bason</h5> " +
         "This App is open source and was developed with html5, javascript and css3, the new web standards," +
         "developed mainly with: <b><h5>JetBrains WebStorm, Mozilla Firefox and the firefox extension csssir</h5></b>" +
         "and also with help of : Notepad++, Aptana Studio and Eclipse" +
-        "<br><p>to download the code press <a href='https://gist.github.com/4246911' style='color: #bc8f8f;'>Here</a></p>"+
+        "<br><p>to download the code press <a href='https://gist.github.com/4246911' style='color: #bc8f8f;'>Here</a></p></section>"+
         "<a href='#' onclick='Exit()'><img src='exit.png' class ='ExitAbout'></a>").addClass("About");
     $("b.HomeFont").html("About");
 
@@ -62,9 +65,9 @@ function Exit(){
     $("b.HomeFont").html("Alien-Defense");
 }
 function HowTo(){
-    $("nav").html("we are in year 2078 and the aliens are attacking the earth. almost all of the earth communication is destoyed by electoromagnetical radiaion<br>" +
+    $("nav").html("<p style='font-size: 1.2em;'>we are in year 2078 and the aliens are attacking the earth. almost all of the earth communication is destoyed by electoromagnetical radiaion<br>" +
         "of course also all the navigation system is destroyed, but we have deep in the earth the navigate system for our shields that can protect whole cities, but we must have on who navigate the shields to the attacked place, which we know from the alien Modiin?????<br>" +
-        "<h2>And it's You!, click on the place of the city so fast as you can and protect the city!!!</h2>"+
+        "<h2>And it's You!, click on the place of the city so fast as you can and protect the city!!!</h2></p>"+
         "<a href='#' onclick='Exit()'><img src='exit.png' class ='ExitAbout'></a>").addClass("About");
     $("b.HomeFont").html("How to Play");
 

@@ -1,3 +1,10 @@
+@font-face
+
+{
+    font-family: myFont;
+    src: url('myFont.ttf');
+
+}
 .headermin{
 
     height:7%;
@@ -45,21 +52,13 @@
     z-index: 4;
 
 }
-.FontBox{
-width: 100%;
-    height: 20%;
-    z-index: 900;
-    background-color: #ffffff;
-    opacity: 1;
-    border-radius: 25pt;
-    -webkit-border-radius: 25pt;
-}
+
 .HeaderFontShadow{
     color: white;
 
     text-align: center;
 
-    font-size:200%;
+font-size: 1.7em;
     margin-left: 16%;
     margin-right: 18%;
 
@@ -73,7 +72,7 @@ width: 100%;
     text-align: center;
     margin-left: 16%;
     margin-right: 18%;
-    font-size:200%;
+    font-size: 1.7em;
     text-shadow: 0px 0px 50px #66ff00;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00)";/*IE 8*/
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00); /*IE 5.5-7*/
@@ -92,12 +91,12 @@ width: 100%;
     background-color: #b22222;
     -webkit-border-radius: 100%; /* Safari 3-4, iOS 1-3.2, Android ?1.6 */
     border-radius: 100%; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-    border:  5px #ffffff;
+
     position: fixed;
     top: 4%;
     right: 1.5%;
     font:narrower;
-    font-size: 80%;
+    font-size: 0.8em;
     vertical-align: top;
 
 }
@@ -228,9 +227,9 @@ width: 100%;
     left: 15%;
     width: 70%;
     height: 20%;
-    border: 50px #f5f5f5;
-    border-radius: 50pt;
-    -webkit-border-radius: 50pt;
+
+    border-radius: 1.5em;
+    -webkit-border-radius:1.5em;
     background-color: #ff4500;
     z-index: 1001;
 }
@@ -294,8 +293,7 @@ header.Finish{
     position: relative;
     margin-top: 10%;
     height: 15%;
-    border-bottom-color: black;
-    border-bottom-width: 5px;
+
     color: #9400d3;
     text-align: center;
     z-index: 1002;
@@ -305,7 +303,7 @@ header.Finish{
 
 header.Sub{
     margin: 5%;
-    font-size: 110%;
+    font-size: 1.1em;
     color: #8b0000;
     text-shadow: 0px 0px 15px white ;
     text-align: center;
@@ -315,7 +313,7 @@ header.Sub{
 footer.Info{
     vertical-align: bottom;
     text-align: center;
-    font-size: 120%;
+    font-size: 1.2em;
     font-family: cursive;
 }
 footer{
@@ -331,19 +329,19 @@ footer{
 -moz-animation-duration:5s;
     -moz-animation-name: opacity;
     height: 8%;
-    width: 18%;
-    border-top-right-radius: 25pt;
-    border-bottom-right-radius: 25pt;
-    -webkit-border-bottom-right-radius: 25pt;
-    -webkit-border-top-right-radius: 25pt;
+    width: 20%;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    -webkit-border-bottom-right-radius: 1em;
+    -webkit-border-top-right-radius: 1em;
     color: #f5deb3;
     vertical-align: middle;
     position: fixed;
-    top: 4%;
+    top: 3%;
     right: 5%;
     padding-top: 1%;
-    border: 11pt dotted #ffffff;
-    font-size: 180%;
+    border: 0.3em dotted #ffffff;
+    font-size: 1.8em;
     text-align: center;
     font-family:Narkisim;
     z-index: 1006;
@@ -357,14 +355,40 @@ footer{
     z-index: 999;
     top: 0%;
     left: 0%;
+
 }
 .Resume{
+    background: #000000;
+    background: radial-gradient(top left, #000000,#a0a0a0);
+    background: -moz-radial-gradient(top left, #000000,  #a0a0a0);
+    background: -webkit-gradient(radial, top left, from(#000000), to(#a0a0a0));
+    background: -webkit-radial-gradient(top left, #000000, #a0a0a0);
+    background: -o-radial-gradient(top left, #000000,#a0a0a0);
+    border: 0.5em outset #11005c;
+border-radius: 1em;
+    -webkit-border-radius: 1em;
     position: fixed;
     height: 15%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: narkisim;
 width: 20%;
-    left: 40%;
+    left: 39%;
     top: 30%;
-    border: 12px outset #42058d;
+color: #d2691e;
+    font: bold;
     background-color: #696969;
     z-index: 1000;
+}
+.ResumeCountDown{
+    font-size: 5em;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffe4c4;
+    z-index: 999;
+    position: fixed;
+ height: 20%;
+    width: 30%;
+    left: 35%;
+top: 30%;
 }
