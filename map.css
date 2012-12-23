@@ -1,87 +1,81 @@
-@font-face
-
-{
+@font-face {
     font-family: myFont;
     src: url('myFont.ttf');
-
 }
-.headermin{
 
-    height:7%;
-    z-index:400;
-    position:fixed;
+.headermin {
+    height: 7%;
+    z-index: 400;
+    position: fixed;
     top: 0%;
-    left:0%;
+    left: 0%;
     width: 100%;
     background-color: #2a2a2a;
-
-
 }
-.CountDown
-{
-    position:fixed;
-    top:2%;
-    left:1.5%;
+
+.CountDown {
+    position: fixed;
+    top: 2%;
+    left: 1.5%;
 }
-.headermax{
-    position:fixed;
+
+.headermax {
+    position: fixed;
     top: 6%;
-    left:0%;
+    left: 0%;
     width: 100%;
     height: 40%;
     background-color: #2a2a2a;
-
-
     z-index: 1;
 }
-.EasyImg{
+
+.EasyImg {
     position: fixed;
-    bottom:0%;
+    bottom: 0%;
     vertical-align: middle;
     left: 0%;
-    -webkit-box-shadow: 0px 0px 10px 0px #ffffff; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    box-shadow: 0px 0px 10px 0px #ffffff; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
 
-
+    -webkit-box-shadow: 0px 0px 10px 0px #ffffff;
+    box-shadow: 0px 0px 10px 0px #ffffff; /* Safari 3-4, iOS 4.0.2 -4.2, Android 2.3+ */
+    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
     z-index: 300;
 }
-.PerfImg{
-    position:fixed;
-    left:4%;
-    top:4%;
-    z-index: 4;
 
+.PerfImg {
+    position: fixed;
+    left: 4%;
+    top: 4%;
+    z-index: 4;
 }
 
-.HeaderFontShadow{
+.HeaderFontShadow {
     color: white;
-
     text-align: center;
-
-font-size: 1.7em;
+    margin-top: 0;
+    font-size: 1.7em;
     margin-left: 16%;
     margin-right: 18%;
-
-    text-shadow: 0px 0px 50px #ffffff;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#ffffff)";/*IE 8*/
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#ffffff); /*IE 5.5-7*/
-
+    text-shadow: 0px 0px 50px #ffffff; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#ffffff)"; /*IE 8*/
+    /*IE 5.5-7*/
 }
-.HeaderFont{
+
+.HeaderFont {
+    margin-top: 0;
     color: #920c0c;
     text-align: center;
     margin-left: 16%;
     margin-right: 18%;
     font-size: 1.7em;
-    text-shadow: 0px 0px 50px #66ff00;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00)";/*IE 8*/
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00); /*IE 5.5-7*/
+    text-shadow: 0px 0px 50px #66ff00; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=90, Color=#66ff00)"; /*IE 8*/
+    /*IE 5.5-7*/
 }
-.Score,.CountDown
-{
-    text-shadow: 0px 0px 25px #067800;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=90, Color=#225c15)";/*IE 8*/
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=90, Color=#225c15); /*IE 5.5-7*/
+
+.Score,.CountDown {
+    text-shadow: 0px 0px 25px #067800; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=25, Direction=90, Color=#225c15)"; /*IE 8*/
+    /*IE 5.5-7*/
     font-family: Arial;
     z-index: 10;
     color: #225c15;
@@ -89,211 +83,481 @@ font-size: 1.7em;
     width: 13%;
     height: 6%;
     background-color: #b22222;
-    -webkit-border-radius: 100%; /* Safari 3-4, iOS 1-3.2, Android ?1.6 */
-    border-radius: 100%; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-
+    border-radius: 100%; /* Safari 3-4, iOS 1-3.2, Android ?1.6 */
+    /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
     position: fixed;
     top: 4%;
     right: 1.5%;
-    font:narrower;
+    font: narrower;
     font-size: 0.8em;
     vertical-align: top;
-
 }
-.Score{
+
+.Score {
     width: 17%;
 }
-.FinishGame,.FinishGameOK,.FinishGameEXL, .FinishGameNoClick, .FinishGameBad, .FinishGameGood{
+
+.FinishGame,.FinishGameOK,.FinishGameEXL,.FinishGameNoClick,.FinishGameBad,.FinishGameGood {
     width: 100%;
     height: 110%;
     z-index: 1001;
-
     position: fixed;
-
     left: 0%;
-    -moz-animation-duration:2s;
-
+    -moz-animation-duration: 2s;
 }
-.FinishGame{
-    top:-100%;
+
+.FinishGame {
+    top: -100%;
+
+    -webkit-animation-name: finish;
     -moz-animation-name: finish;
+    -o-animation-name: finish;
+    animation-name: finish;
     background-color: green;
-
 }
-.FinishGameGood{
+
+.FinishGameGood {
     top: -10%;
     background-color: #006400;
-    -moz-animation-name : finishgood;
 
+    -webkit-animation-name: finishgood;
+    -moz-animation-name: finishgood;
+    -o-animation-name: finishgood;
+    animation-name: finishgood;
 }
-.FinishGameOK{
+
+.FinishGameOK {
     top: -10%;
     background-color: #bc8f8f;
-    -moz-animation-name : finishok;
 
+    -webkit-animation-name: finishok;
+    -moz-animation-name: finishok;
+    -o-animation-name: finishok;
+    animation-name: finishok;
 }
-.FinishGameEXL{
+
+.FinishGameEXL {
     top: -10%;
+    background-color: #7cfc00;
 
-    background-color:#7cfc00;
-    -moz-animation-name : finishexl;
-
-
+    -webkit-animation-name: finishexl;
+    -moz-animation-name: finishexl;
+    -o-animation-name: finishexl;
+    animation-name: finishexl;
 }
-.FinishGameBad{
+
+.FinishGameBad {
     top: -10%;
     background-color: #f60000;
-    -moz-animation-name : finishbad;
+
+    -webkit-animation-name: finishbad;
+    -moz-animation-name: finishbad;
+    -o-animation-name: finishbad;
+    animation-name: finishbad;
 }
-.FinishGameNoClick{
+
+.FinishGameNoClick {
     top: -10%;
     background-color: #dcdcdc;
-    -moz-animation-name: finishnoclick;
 
+    -webkit-animation-name: finishnoclick;
+    -moz-animation-name: finishnoclick;
+    -o-animation-name: finishnoclick;
+    animation-name: finishnoclick;
 }
-@-moz-keyframes finish{
-    from{
-        top:-100%;
-        background-color :  black;
+
+@keyframes finish {
+    from {
+        top: -100%;
+        background-color: black;
     }
-    to{
+    to {
         top: 0%;
         background-color: green;
-
     }
 
 }
-@-moz-keyframes finishexl{
-    from{
 
-        background-color :  green;
+@-moz-keyframes finish {
+    from {
+        top: -100%;
+        background-color: black;
     }
-    to{
+    to {
+        top: 0%;
+        background-color: green;
+    }
 
+}
+
+@-webkit-keyframes finish {
+    from {
+        top: -100%;
+        background-color: black;
+    }
+    to {
+        top: 0%;
+        background-color: green;
+    }
+
+}
+
+
+
+@-o-keyframes finish {
+    from {
+        top: -100%;
+        background-color: black;
+    }
+    to {
+        top: 0%;
+        background-color: green;
+    }
+
+}
+
+@keyframes finishexl {
+    from {
+        background-color: green;
+    }
+    to {
         background-color: #7cfc00;
-
     }
+
 }
-@-moz-keyframes finishgood{
-    from{
 
-        background-color :  green;
+@-moz-keyframes finishexl {
+    from {
+        background-color: green;
     }
-    to{
+    to {
+        background-color: #7cfc00;
+    }
 
+}
+
+@-webkit-keyframes finishexl {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #7cfc00;
+    }
+
+}
+
+@-ms-keyframes finishexl {
+ from {
+   background-color: green;
+ }
+ to {
+   background-color: #7cfc00;
+ }
+
+}
+
+@-o-keyframes finishexl {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #7cfc00;
+    }
+
+}
+
+@keyframes finishgood {
+    from {
+        background-color: green;
+    }
+    to {
         background-color: #006400;
-
     }
+
 }
-@-moz-keyframes finishok{
-    from{
 
-        background-color :  green;
+@-moz-keyframes finishgood {
+    from {
+        background-color: green;
     }
-    to{
+    to {
+        background-color: #006400;
+    }
 
+}
+
+@-webkit-keyframes finishgood {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #006400;
+    }
+
+}
+
+@-ms-keyframes "finishgood" {
+ from {
+   background-color: green;
+ }
+ to {
+   background-color: #006400;
+ }
+
+}
+
+@-o-keyframes finishgood {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #006400;
+    }
+
+}
+
+@keyframes finishok {
+    from {
+        background-color: green;
+    }
+    to {
         background-color: #bc8f8f;
-
     }
 
 }
-@-moz-keyframes finishnoclick{
-    from{
 
-        background-color :  green;
+@-moz-keyframes finishok {
+    from {
+        background-color: green;
     }
-    to{
+    to {
+        background-color: #bc8f8f;
+    }
 
+}
+
+@-webkit-keyframes finishok {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #bc8f8f;
+    }
+
+}
+
+@-ms-keyframes finishok {
+ from {
+   background-color: green;
+ }
+ to {
+   background-color: #bc8f8f;
+ }
+
+}
+
+@-o-keyframes finishok {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #bc8f8f;
+    }
+
+}
+
+@keyframes finishnoclick {
+    from {
+        background-color: green;
+    }
+    to {
         background-color: #dcdcdc;
-
     }
 
 }
-@-moz-keyframes finishbad{
-    from{
 
-        background-color :  green;
+@-moz-keyframes finishnoclick {
+    from {
+        background-color: green;
     }
-    to{
+    to {
+        background-color: #dcdcdc;
+    }
 
+}
+
+@-webkit-keyframes finishnoclick {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #dcdcdc;
+    }
+
+}
+
+@-ms-keyframes "finishnoclick" {
+ from {
+   background-color: green;
+ }
+ to {
+   background-color: #dcdcdc;
+ }
+
+}
+
+@-o-keyframes finishnoclick {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #dcdcdc;
+    }
+
+}
+
+@keyframes finishbad {
+    from {
+        background-color: green;
+    }
+    to {
         background-color: #f60000;
-
     }
 
 }
-.Box{
+
+@-moz-keyframes finishbad {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #f60000;
+    }
+
+}
+
+@-webkit-keyframes finishbad {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #f60000;
+    }
+
+}
+
+
+@-o-keyframes finishbad {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: #f60000;
+    }
+
+}
+
+.Box {
     position: fixed;
     top: 60%;
     left: 15%;
     width: 70%;
     height: 20%;
-
     border-radius: 1.5em;
-    -webkit-border-radius:1.5em;
     background-color: #ff4500;
     z-index: 1001;
 }
 
-.Star1,.Star2,.Star3{
+.Star1,.Star2,.Star3 {
     z-index: 1008;
     position: fixed;
     top: 62.5%;
     -moz-animation-duration: 2s;
+
+    -webkit-animation-name: StarFall;
     -moz-animation-name: StarFall;
+    -o-animation-name: StarFall;
+    animation-name: StarFall;
 }
-.StarPlace1,.StarPlace2,.StarPlace3{
+
+.StarPlace1,.StarPlace2,.StarPlace3 {
     z-index: 1003;
     position: fixed;
     top: 62.5%;
 }
-.StarPlace1,.Star1{
 
-
+.StarPlace1,.Star1 {
     left: 25%;
-
 }
-.StarPlace2,.Star2{
 
+.StarPlace2,.Star2 {
     left: 45%;
-
 }
-.StarPlace3,.Star3{
 
+.StarPlace3,.Star3 {
     left: 65%;
 }
 
-
-@-moz-keyframes StarFall{
-    from{
+@keyframes StarFall {
+    from {
         top: -10%;
-
     }
-    to{
+    to {
         top: 62.5%;
     }
+
+}
+
+@-moz-keyframes StarFall {
+    from {
+        top: -10%;
+    }
+    to {
+        top: 62.5%;
+    }
+
+}
+
+@-webkit-keyframes StarFall {
+    from {
+        top: -10%;
+    }
+    to {
+        top: 62.5%;
+    }
+
 }
 
 
-.ChangeOp{
 
+@-o-keyframes StarFall {
+    from {
+        top: -10%;
+    }
+    to {
+        top: 62.5%;
+    }
+
+}
+
+.ChangeOp {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
     opacity: 1;
-    -moz-animation-duration:2s;
-    -moz-animation-name:opacity;
+    -moz-animation-duration: 2s;
+
+    -webkit-animation-name: opacity;
+    -moz-animation-name: opacity;
+    -o-animation-name: opacity;
+    animation-name: opacity;
 }
 
-@-moz-keyframes opacity{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-header.Finish{
+
+
+header.Finish {
     position: relative;
     margin-top: 10%;
     height: 15%;
-
     color: #9400d3;
     text-align: center;
     z-index: 1002;
@@ -301,33 +565,39 @@ header.Finish{
     font: bold;
 }
 
-header.Sub{
+header.Sub {
     margin: 5%;
     font-size: 1.1em;
     color: #8b0000;
-    text-shadow: 0px 0px 15px white ;
+    text-shadow: 0px 0px 15px white;
     text-align: center;
     z-index: 1002;
 }
 
-footer.Info{
+footer.Info {
     vertical-align: bottom;
     text-align: center;
     font-size: 1.2em;
     font-family: cursive;
 }
-footer{
+
+footer {
     z-index: 1002;
 }
-.BackToGame{
+
+.BackToGame {
     background: #7357ff; /* for non-css3 browsers */
-    background: radial-gradient(center, #7357ff,#f60c33); /* W3C */
-    background: -moz-radial-gradient(center, #7357ff,  #f60c33); /* for firefox 3.6+ */
-    background: -webkit-gradient(radial, center center, from(#7357ff), to(#f60c33)); /* Safari 4+, Chrome */
-    background: -webkit-radial-gradient(center center, #7357ff, #f60c33); /* Chrome 10+, Safari 5.1+, iOS 5+ */
-    background: -o-radial-gradient(center, #7357ff,#f60c33); /* Opera 11.10+ */
--moz-animation-duration:5s;
+    background: -webkit-radial-gradient(center, #7357ff,#f60c33);
+
+    background: -moz-radial-gradient(center, #7357ff,#f60c33);
+    background: -o-radial-gradient(center, #7357ff,#f60c33);
+    background: radial-gradient(center, #7357ff,#f60c33); /* Opera 11.10+ */
+    -moz-animation-duration: 5s;
+
+    -webkit-animation-name: opacity;
     -moz-animation-name: opacity;
+    -o-animation-name: opacity;
+    animation-name: opacity;
     height: 8%;
     width: 20%;
     border-top-right-radius: 1em;
@@ -343,11 +613,14 @@ footer{
     border: 0.3em dotted #ffffff;
     font-size: 1.8em;
     text-align: center;
-    font-family:Narkisim;
+    font-family: Narkisim;
     z-index: 1006;
     text-decoration: underline;
 }
-.Pause{
+
+.Pause {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
     opacity: 0.8;
     width: 100%;
     height: 100%;
@@ -355,40 +628,41 @@ footer{
     z-index: 999;
     top: 0%;
     left: 0%;
-
+    background-color: #000000;
 }
-.Resume{
+
+.Resume {
     background: #000000;
-    background: radial-gradient(top left, #000000,#a0a0a0);
-    background: -moz-radial-gradient(top left, #000000,  #a0a0a0);
-    background: -webkit-gradient(radial, top left, from(#000000), to(#a0a0a0));
-    background: -webkit-radial-gradient(top left, #000000, #a0a0a0);
+
+    background: -webkit-radial-gradient(top left, #000000,#a0a0a0);
+    background: -moz-radial-gradient(top left, #000000,#a0a0a0);
     background: -o-radial-gradient(top left, #000000,#a0a0a0);
+    background: radial-gradient(top left, #000000,#a0a0a0);
     border: 0.5em outset #11005c;
-border-radius: 1em;
-    -webkit-border-radius: 1em;
+    border-radius: 1em;
     position: fixed;
     height: 15%;
     text-align: center;
     vertical-align: middle;
     font-family: narkisim;
-width: 20%;
+    width: 20%;
     left: 39%;
     top: 30%;
-color: #d2691e;
+    color: #d2691e;
     font: bold;
     background-color: #696969;
     z-index: 1000;
 }
-.ResumeCountDown{
+
+.ResumeCountDown {
     font-size: 5em;
     vertical-align: middle;
     text-align: center;
     color: #ffe4c4;
     z-index: 999;
     position: fixed;
- height: 20%;
+    height: 20%;
     width: 30%;
     left: 35%;
-top: 30%;
+    top: 30%;
 }
